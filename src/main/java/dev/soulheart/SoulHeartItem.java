@@ -18,7 +18,7 @@ import net.minecraft.world.level.Level;
 
 public class SoulHeartItem extends SimplePolymerItem {
     public SoulHeartItem(Item.Properties properties) {
-        super(properties, Items.GOLDEN_APPLE);
+        super(properties, Items.GOLDEN_APPLE, true);
     }
 
     /** Can't start eating one while a Soul Heart is already active. */

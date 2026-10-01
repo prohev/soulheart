@@ -20,7 +20,7 @@ public final class SoulHeartItems {
     private SoulHeartItems() {}
 
     public static void register() {
-        // Shows up as an echo shard on vanilla clients.
+        // Soul Shard item
         ResourceKey<Item> shardKey = ResourceKey.create(Registries.ITEM, SoulHeartMod.id("soul_shard"));
         SOUL_SHARD = Registry.register(BuiltInRegistries.ITEM, shardKey,
                 new SimplePolymerItem(
@@ -29,9 +29,9 @@ public final class SoulHeartItems {
                                 .rarity(Rarity.RARE)
                                 .component(DataComponents.ITEM_NAME,
                                         Component.literal("Soul Shard").withStyle(ChatFormatting.AQUA)),
-                        Items.ECHO_SHARD));
+                        Items.ECHO_SHARD,true));
 
-        // Shows up as a golden apple (with glint) on vanilla clients.
+        // Soul Heart item
         ResourceKey<Item> heartKey = ResourceKey.create(Registries.ITEM, SoulHeartMod.id("soul_heart"));
         SOUL_HEART = Registry.register(BuiltInRegistries.ITEM, heartKey,
                 new SoulHeartItem(
