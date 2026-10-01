@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": "minecraft:diamond",
+    "S": "soulheart:soul_shard",
+    "C": "minecraft:sculk_catalyst"
+  },
+  "pattern": ["DSD", "DCD", "DDD"],
+  "result": { "id": "soulheart:soul_shard", "count": 2 }
+}

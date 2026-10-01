@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "soulheart:soul_shard",
+    "minecraft:breeze_rod",
+    "minecraft:blaze_rod",
+    "minecraft:glow_berries"
+  ],
+  "result": { "id": "soulheart:soul_heart", "count": 1 }
+}

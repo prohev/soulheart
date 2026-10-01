@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "soulheart",
+  "version": "1.0.0",
+  "name": "Soul Heart",
+  "description": "Server-side only. Eat a Soul Heart to keep your inventory the next time you die (only you, not the world).",
+  "authors": [],
+  "environment": "*",
+  "entrypoints": { "main": ["dev.soulheart.SoulHeartMod"] },
+  "mixins": ["soulheart.mixins.json"],
+  "depends": {
+    "fabricloader": "*",
+    "minecraft": "~26.2",
+    "fabric-api": "*",
+    "polymer-core": "*",
+    "polymer-resource-pack": "*"
+  }
+}
