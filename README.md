@@ -1,6 +1,8 @@
-# Soul Heart (Fabric, server-side only, Minecraft 26.2)
+# Soul Heart (Fabric, server-side only)
 
-Test checklist
+Currently updated for 26.2
+
+Testing checklist
 - /give yourself a soul_heart, eat it: message to you only, blue heart in tab for everyone.
 - Try eating a second one: refused, action bar message.
 - Die: inventory kept, XP drops, broadcast "<name>'s soul was protected", heart gone from tab.
