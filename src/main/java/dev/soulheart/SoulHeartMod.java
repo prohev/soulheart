@@ -5,6 +5,7 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents;
 import net.fabricmc.fabric.api.loot.v3.LootTableEvents;
 import net.minecraft.ChatFormatting;
+import net.minecraft.core.Holder;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
@@ -14,7 +15,7 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.predicates.LootItemRandomChanceCondition;
-import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
+import net.minecraft.world.level.storage.loot.providers.number.ints.ConstantValue;
 
 import java.util.Set;
 
@@ -42,7 +43,7 @@ public class SoulHeartMod implements ModInitializer {
         LootTableEvents.MODIFY.register((key, builder, source, registries) -> {
             if (source.isBuiltin() && SHARD_LOOT.contains(key.identifier())) {
                 builder.withPool(LootPool.lootPool()
-                        .setRolls(ConstantValue.exactly(1.0f))
+                        .setRolls(Holder.direct(new ConstantValue(1)))
                         .when(LootItemRandomChanceCondition.randomChance(SHARD_CHANCE))
                         .add(LootItem.lootTableItem(SoulHeartItems.SOUL_SHARD)));
             }
